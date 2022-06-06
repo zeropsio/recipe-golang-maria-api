@@ -1,0 +1,8 @@
+api:
+  build:
+    base: [ go@1 ]
+    build:
+      - go build -o app main.go model.go http.go
+    deploy: [ app ]
+  run:
+    start: ./app
